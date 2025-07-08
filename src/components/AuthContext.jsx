@@ -1,9 +1,10 @@
 import './AuthContext.css';
 import React, { createContext, useState } from 'react';
 
-export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+export const AuthContext = createContext({});
+
+const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -13,10 +14,12 @@ export const AuthProvider = ({ children }) => {
 			setIsLoggedIn(true);
 		}, 1000);
 	};
+
 	const logout = () => {
 		setUser(null);
 		setIsLoggedIn(false);
 	};
+
 	const authData = {
 		user,
 		isLoggedIn,
@@ -30,4 +33,4 @@ export const AuthProvider = ({ children }) => {
 		</AuthContext.Provider>
 	);
 };
-
+export default AuthProvider;
