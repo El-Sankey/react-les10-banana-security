@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
 	const login = (username) => {
 		setTimeout(() => {
-			setUser({ name: username, role: "verkoper" });
+			setUser({ name: username, role: "admin" });
 			setIsLoggedIn(true);
 		}, 1000);
 	};
@@ -34,3 +34,39 @@ const AuthProvider = ({ children }) => {
 	);
 };
 export default AuthProvider;
+
+// export const Authcontext = createContext();
+//
+// const Authcontext = ({children}) => {
+// 	const [authstate, setAuthState] = useState({
+// 		isAuth: false,
+// 		user: "",
+// 	});
+// 	const login = (email) => {
+// 		setAuthState({
+// 			isAuth: true,
+// 			user: email,
+// 		});
+// 	};
+//
+// 	const logout = () => {
+// 		setAuthState({
+// 			isAuth: false,
+// 			user: ""
+// 		});
+// 	};
+//
+// 	const authData = {
+// 		...authstate,
+// 		login,
+// 		logout,
+// 	};
+// };
+//
+// return (
+// 	<AuthContext.Provider value={authData}>
+// 		{children}
+// 	</AuthContext.Provider>
+// );
+
+

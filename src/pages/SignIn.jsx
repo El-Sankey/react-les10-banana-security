@@ -4,8 +4,8 @@ import {AuthContext} from "../components/AuthContext";
 
 function SignIn() {
 	const {login} = useContext(AuthContext);
-	const [email, setEmail] = useState(" ")
-	const [password, setPassword] = useState(" ")
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
 	const handelSubmit = (e) => {
 		e.preventDefault();
@@ -43,3 +43,31 @@ function SignIn() {
 }
 
 export default SignIn;
+
+
+// const SignIn = () => {
+// 	const { login, isAuth } = useContext(AuthContext);
+// 	const [email, setEmail] = useState('');
+//
+// 	return (
+// 		<div>
+// 			{isAuth ? (
+// 				<p>Je bent al ingelogd.</p>
+// 			) : (
+// 				<>
+// 					<h2>Inloggen</h2>
+// 					<input
+// 						type="email"
+// 						placeholder="Voer je e-mailadres in"
+// 						value={email}
+// 						onChange={(e) => setEmail(e.target.value)}
+// 					/>
+// 					<button onClick={() => login(email)}>Inloggen</button>
+// 				</>
+// 			)}
+// 		</div>
+// 	);
+// };
+//
+// export default SignIn;
+

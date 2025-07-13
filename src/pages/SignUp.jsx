@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 
 function SignUp() {
-    const [email, setEmail] = useState(" ");
-    const [password, setPasword] = useState(" ");
-    const [usersName, setusersName] = useState(" ");
+    const [email, setEmail] = useState("");
+    const [password, setPasword] = useState("");
+    const [usersName, setUsersName] = useState("");
 
     const handelSubmit= (e) => {
         e.preventDefault();
-        console.log("U moet nog registreren!")
+        console.log("U moet nog registreren!");
     }
 
   return (
@@ -25,21 +25,21 @@ function SignUp() {
                 <input type="text"
                        placeholder="voer Gebruikersnaam in"
                        value={usersName}
-                       onChange={(e) => setEmail(e.target.value)}
+                       onChange={(e) => setUsersName(e.target.value)}
                 />
             </label>
             <label>Emailadres:
                 <input type="email"
                        placeholder="voer Emailadres in"
-                       value={password}
-                       onChange={(e) => setPassword(e.target.valu)}
+                       value={email}
+                       onChange={(e) => setEmail(e.target.value)}
                 />
             </label>
             <label>Wachtwoord:
                 <input type="password"
                        placeholder="voer Wachtwoord in"
                        value={password}
-                       onChange={(e) => setPassword(e.target.valu)}
+                       onChange={(e) => setPasword(e.target.value)}
                 />
             </label>
             <br/>
