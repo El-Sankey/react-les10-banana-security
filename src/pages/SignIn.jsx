@@ -23,14 +23,18 @@ function SignIn() {
 					<input type="email"
 						   placeholder="voer Emailadres in"
 						   value={email}
-						   onChange={(e) => setEmail(e.target.value)}
+						   onChange={(e) => {
+							   setEmail(e.target.value);
+						   }}
 					/>
 				</label>
 				<label>Wachtwoord:
 					<input type="password"
 						   placeholder="voer Wachtwoord in"
 						   value={password}
-						   onChange={(e) => setPassword(e.target.valu)}
+						   onChange={(e) => {
+							   setPassword(e.target.value);
+						   }}
 					/>
 				</label>
 				<br/>

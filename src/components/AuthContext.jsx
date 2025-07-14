@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
 	const login = (username) => {
 		setTimeout(() => {
-			setUser({ name: username, role: "admin" });
+			setUser({ name: username, role: "gebruiker" });
 			setIsLoggedIn(true);
 		}, 1000);
 	};
@@ -19,6 +19,8 @@ const AuthProvider = ({ children }) => {
 		setUser(null);
 		setIsLoggedIn(false);
 	};
+
+	const isGebruiker = user?.role === "gebruiker";
 
 	const authData = {
 		user,
