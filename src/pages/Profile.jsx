@@ -9,6 +9,7 @@ function Profile() {
         <h2>Gegevens</h2>
         <p><strong>Gebruikersnaam:</strong> hardcoded-test</p>
         <p><strong>Email:</strong> hardcoded@test.com</p>
+        <p><strong>Wachtwoord:</strong> Enter.welkom</p>
       </section>
       <section>
         <h2>Strikt geheime profiel-content</h2>
